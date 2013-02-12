@@ -1,0 +1,13 @@
+{
+  "name": "lib/google-books-search",
+  "version": "0.0.1",
+  "description": "Lightweight wrapper that queries the Google Books API",
+  "main": "google-books-search.js",
+  "repository": "",
+  "keywords": [
+    "google-books",
+    "api",
+    "books"
+  ],
+  "author": "Sam Milledge",
+}
