@@ -1,12 +1,12 @@
 {
-  "name": "node-google-books-search",
+  "name": "google-books-search",
   "version": "0.0.1",
   "description": "A lightweight node wrapper for the Google Books API.",
   "main": "lib/google-books-search.js",
-  "dependencies":{
+  "dependencies": {
     "request":"",
     "extend":"",
-    "querystring":"",
+    "querystring":""
   },
   "repository": {
     "type": "git",
