@@ -1,13 +1,23 @@
 {
-  "name": "lib/google-books-search",
+  "name": "node-google-books-search",
   "version": "0.0.1",
-  "description": "Lightweight wrapper that queries the Google Books API",
-  "main": "google-books-search.js",
-  "repository": "",
+  "description": "A lightweight node wrapper for the Google Books API.",
+  "main": "lib/google-books-search.js",
+  "dependencies":{
+    "request":"",
+    "extend":"",
+    "querystring":"",
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://smilledge@github.com/smilledge/node-google-books-search.git"
+  },
   "keywords": [
     "google-books",
     "api",
     "books"
   ],
   "author": "Sam Milledge",
+  "license": "MIT",
+  "readmeFilename": "Readme.md"
 }
