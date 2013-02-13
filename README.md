@@ -22,9 +22,13 @@ A lightweight node wrapper for the Google Books API.
 		lang: 'en'
 	};
 
-	books.search(query, options, function(results) {
-
-		console.log(results);
+	books.search(query, options, function(error, results) {
+		
+		if ( ! error ) {
+			console.log(results);
+		} else {
+			console.log(error);
+		}
 
 	});
 
