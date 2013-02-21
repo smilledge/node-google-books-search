@@ -13,6 +13,15 @@ describe('Searching', function() {
 		});
 	});
 
+	it('the options argument should be optional', function(done) {
+		books.search('Guinness World Records', function(error, results) {
+			should.not.exist(error);
+			should.exist(results);
+			results[0].should.have.property('title');
+			done();
+		});
+	});
+
 	it('should return an empty object if there are no results', function(done) {
 		books.search('JCEhrrpxF2E1s7aPW8zd2903tQ4AlCB9', {}, function(error, results) {
 			should.not.exist(error);
