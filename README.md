@@ -8,9 +8,13 @@ A lightweight node wrapper for the Google Books API.
 
 ## Basic Usage
 
+### .search(query, options, callback)
+
+Search for books matching the specified query.
+
 	var books = require('google-books-search');
 
-	var query = "Guinness World Records";
+	var query = "Professional JavaScript for Web Developers";
 
 	var options = {
 		key: "YOUR API KEY",
@@ -31,6 +35,28 @@ A lightweight node wrapper for the Google Books API.
 		}
 
 	});
+
+Returns an array of JSON objects. For example;
+
+[
+	{
+		"id":"9KJJYFIss_wC",
+		"title":"Professional Javascript For Web Developers 2Nd Ed",
+		"authors":[
+			"Nicholas C. Zakas"
+		],
+		"publisher":"John Wiley & Sons",
+		"publishedDate":"2009-02-09",
+		"pageCount":840,
+		"printType":"BOOK",
+		"thumbnail":"http://bks5.books.google.com.au/books?id=9KJJYFIss_wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+		"language":"en",
+		"link":"http://books.google.com.au/books?id=9KJJYFIss_wC&dq=Professional+JavaScript+for+Web+Developers&as_pt=ALLTYPES&hl=&source=gbs_api"
+	},
+
+	...
+	
+]
 
 ## Options
 
