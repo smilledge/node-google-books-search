@@ -38,25 +38,25 @@ Search for books matching the specified query.
 
 Returns an array of JSON objects. For example;
 
-[
-	{
-		"id":"9KJJYFIss_wC",
-		"title":"Professional Javascript For Web Developers 2Nd Ed",
-		"authors":[
-			"Nicholas C. Zakas"
-		],
-		"publisher":"John Wiley & Sons",
-		"publishedDate":"2009-02-09",
-		"pageCount":840,
-		"printType":"BOOK",
-		"thumbnail":"http://bks5.books.google.com.au/books?id=9KJJYFIss_wC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-		"language":"en",
-		"link":"http://books.google.com.au/books?id=9KJJYFIss_wC&dq=Professional+JavaScript+for+Web+Developers&as_pt=ALLTYPES&hl=&source=gbs_api"
-	},
+	[
+		{
+			"id":"9KJJYFIss_wC",
+			"title":"Professional Javascript For Web Developers 2Nd Ed",
+			"authors":[
+				"Nicholas C. Zakas"
+			],
+			"publisher":"John Wiley & Sons",
+			"publishedDate":"2009-02-09",
+			"pageCount":840,
+			"printType":"BOOK",
+			"thumbnail":"http://bks5.books.google.com.au/books?id=...",
+			"language":"en",
+			"link":"http://books.google.com.au/books?id=..."
+		},
 
-	...
-	
-]
+		...
+
+	]
 
 ## Options
 
