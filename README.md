@@ -59,7 +59,7 @@ Returns an array of JSON objects. For example;
 
     ]
 
-For a description of each value; see the API documentaion for a [volumes](https://developers.google.com/books/docs/v1/reference/volumes).
+For a description of each value; see the [Google Books API documentaion for volumes](https://developers.google.com/books/docs/v1/reference/volumes).
 
 ## Advanced Usage
 
@@ -87,12 +87,14 @@ The search method optionally accepts an options object as the second argument. S
 
 ## Options
 
-`key` : Your Google API key (Optional)
-`field` : Search in a specified field (title, author, publisher, subject or isbn) (Optional)
-`offset` : The position in the collection at which to start the list of results (Default: 0)
-`limit` : The maximum number of results to return (Max 40) (Defult: 10)
-`type` : Restrict results to books or magazines (Default: all)
-`order` : Order results by relevance or newest (Default: relevance)
-`lang` : Restrict results to a specified language (two-letter ISO-639-1 code) (Default: en)
+Option | Description
+--- | ---
+`key` | Your Google API key (Optional)
+`field` | Search in a specified field (title, author, publisher, subject or isbn) (Optional)
+`offset` | The position in the collection at which to start the list of results (Default: 0)
+`limit` | The maximum number of results to return (Max 40) (Defult: 10)
+`type` | Restrict results to books or magazines (Default: all)
+`order` | Order results by relevance or newest (Default: relevance)
+`lang` | Restrict results to a specified language (two-letter ISO-639-1 code) (Default: en)
 
 For more info please see the [Google Books API documentation](https://developers.google.com/books/docs/v1/reference/)
