@@ -7,7 +7,7 @@ describe('Searching', function() {
     it('should return a JSON object of books', function(done) {
         books.search('Guinness World Records', {}, function(error, results) {
             should.not.exist(error);
-            should.exist(results);
+            results.should.be.an.instanceof(Array)
             results[0].should.have.property('title');
             done();
         });
@@ -16,16 +16,16 @@ describe('Searching', function() {
     it('the options argument should be optional', function(done) {
         books.search('Guinness World Records', function(error, results) {
             should.not.exist(error);
-            should.exist(results);
+            results.should.be.an.instanceof(Array)
             results[0].should.have.property('title');
             done();
         });
     });
 
-    it('should return an empty object if there are no results', function(done) {
+    it('should return an empty array if there are no results', function(done) {
         books.search('JCEhrrpxF2E1s7aPW8zd2903tQ4AlCB9', {}, function(error, results) {
             should.not.exist(error);
-            should.exist(results);
+            results.should.be.an.instanceof(Array)
             results.length.should.equal(0);
             done();
         });
@@ -54,6 +54,16 @@ describe('Searching', function() {
         books.search(null, {}, function(error, results) {
             should.exist(error);
             should.not.exist(results);
+            done();
+        });
+    });
+
+    it('should return the full API response body', function(done) {
+        books.search('Javascript', {}, function(error, results, response) {
+            should.not.exist(error);
+            should.exist(response);
+            should.equal(response.kind, 'books#volumes');
+            should.exist(response.items);
             done();
         });
     });

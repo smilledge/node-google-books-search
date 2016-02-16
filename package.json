@@ -4,8 +4,8 @@
   "description": "A lightweight node wrapper for the Google Books API.",
   "main": "./lib/google-books-search.js",
   "dependencies": {
-    "extend":"",
-    "querystring":""
+    "lodash": "^4.4.0",
+    "querystring": "^0.2.0"
   },
   "devDependencies": {
     "mocha": "1.x.x",
@@ -25,5 +25,5 @@
   ],
   "author": "Sam Milledge",
   "license": "MIT",
-  "readmeFilename": "Readme.md"
+  "readmeFilename": "REAMDE.md"
 }
