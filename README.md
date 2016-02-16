@@ -26,23 +26,40 @@ Returns an array of JSON objects. For example;
 
     [
         {
-            "id":"9KJJYFIss_wC",
-            "title":"Professional Javascript For Web Developers 2Nd Ed",
+            "id": "9KJJYFIss_wC",
+            "title": "Professional Javascript For Web Developers 2Nd Ed",
+            "subtitle": "...",
             "authors":[
                 "Nicholas C. Zakas"
             ],
-            "publisher":"John Wiley & Sons",
-            "publishedDate":"2009-02-09",
-            "pageCount":840,
-            "printType":"BOOK",
-            "thumbnail":"http://bks5.books.google.com.au/books?id=...",
-            "language":"en",
-            "link":"http://books.google.com.au/books?id=..."
+            "publisher": "John Wiley & Sons",
+            "publishedDate": "2009-02-09",
+            "description": "...",
+            "industryIdentifiers": [
+                {
+                    "type": "ISSN",
+                    "identifier": "..."
+                }
+            ],
+            "pageCount": 840,
+            "printType": "BOOK",
+            "averageRating": "4",
+            "thumbnail": "http://bks5.books.google.com.au/books?id=...",
+            "images": {
+                "small": "http://...",
+                "medium": "http://...",
+                "large": "http://...",
+                "extraLarge": "http://...",
+            },
+            "language": "en",
+            "link": "http://books.google.com.au/books?id=..."
         },
 
         ...
 
     ]
+
+For a description of each value; see the API documentaion for a [volumes](https://developers.google.com/books/docs/v1/reference/volumes).
 
 ## Advanced Usage
 
@@ -60,7 +77,7 @@ The search method optionally accepts an options object as the second argument. S
         lang: 'en'
     };
 
-    books.search("Professional JavaScript for Web Developers", options, function(error, results) {
+    books.search("Professional JavaScript for Web Developers", options, function(error, results, apiResponse) {
         if ( ! error ) {
             console.log(results);
         } else {
@@ -78,4 +95,4 @@ The search method optionally accepts an options object as the second argument. S
 `order` : Order results by relevance or newest (Default: relevance)
 `lang` : Restrict results to a specified language (two-letter ISO-639-1 code) (Default: en)
 
-For more info please see the [Google Books API documentation](http://code.google.com/apis/books/docs/v1/using.html)
+For more info please see the [Google Books API documentation](https://developers.google.com/books/docs/v1/reference/)
