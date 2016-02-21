@@ -1,10 +1,14 @@
 # node-google-books-search
 
-A lightweight node wrapper for the Google Books API.
+[![Build Status](https://travis-ci.org/smilledge/node-google-books-search.svg?branch=master)](https://travis-ci.org/smilledge/node-google-books-search)
+[![npm](https://img.shields.io/npm/v/google-books-search.svg)](https://www.npmjs.com/package/google-books-search)
+[![npm](https://img.shields.io/npm/dt/google-books-search.svg)](https://www.npmjs.com/package/google-books-search)
+
+A simple Node.js client for the Google Books API.
 
 ## Install
 
-    npm install google-books-search
+    npm install --save google-books-search
 
 ## Basic Usage
 
