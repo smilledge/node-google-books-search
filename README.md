@@ -18,7 +18,7 @@ Search for books matching the specified query.
 
     var books = require('google-books-search');
 
-    books.search("Professional JavaScript for Web Developers", function(error, results) {
+    books.search('Professional JavaScript for Web Developers', function(error, results) {
         if ( ! error ) {
             console.log(results);
         } else {
@@ -65,7 +65,17 @@ Returns an array of JSON objects. For example;
 
 For a description of each value; see the [Google Books API documentaion for volumes](https://developers.google.com/books/docs/v1/reference/volumes).
 
-## Advanced Usage
+### .lookup(volumeId, options, callback)
+
+Lookup books by Volume ID.
+
+    books.lookup('9KJJYFIss_wC', function(error, result) {
+        ...
+    });
+
+The options argument accepts an object with a `key` field (your API key).
+
+## Advanced Searches
 
 The search method optionally accepts an options object as the second argument. See below for an overview of the available options.
 

@@ -2,7 +2,7 @@ var mocha = require('mocha');
 var should = require('should');
 var books = require('../lib/google-books-search.js');
 
-describe('Searching', function() {
+describe('Search', function() {
 
     it('should return a JSON object of books', function(done) {
         books.search('Guinness World Records', {}, function(error, results) {
@@ -64,6 +64,29 @@ describe('Searching', function() {
             should.exist(response);
             should.equal(response.kind, 'books#volumes');
             should.exist(response.items);
+            done();
+        });
+    });
+
+});
+
+
+describe('Lookup', function() {
+
+    it('should return a JSON object of a volume', function(done) {
+        books.lookup('9KJJYFIss_wC', function(error, result) {
+            should.not.exist(error);
+            result.should.be.an.instanceof(Object);
+            result.id.should.equal('9KJJYFIss_wC');
+            result.should.have.property('title');
+            done();
+        });
+    });
+
+    it('should return an error if an invalid volume id is provided', function(done) {
+        books.lookup('this is not a real volume id', function(error, result) {
+            should.exist(error);
+            should.not.exist(result);
             done();
         });
     });
